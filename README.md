@@ -1,8 +1,8 @@
-<p align="center">
+﻿<p align="center">
     <a href="https://github.com/yiisoft" target="_blank">
         <img src="https://avatars0.githubusercontent.com/u/993323" height="100px">
     </a>
-    <h1 align="center">Yii 2 Basic Project Template</h1>
+    <h1 align="center">Yii 2 ParserSheets</h1>
     <br>
 </p>
 
@@ -37,10 +37,10 @@ DIRECTORY STRUCTURE
 REQUIREMENTS
 ------------
 
-The minimum requirement by this project template that your Web server supports PHP 7.4.
+The minimum requirement by this project template that your Web server supports PHP 8.1.
 
 
-INSTALLATION
+Установка
 ------------
 
 ### Install via Composer
@@ -51,7 +51,7 @@ at [getcomposer.org](https://getcomposer.org/doc/00-intro.md#installation-nix).
 You can then install this project template using the following command:
 
 ~~~
-composer create-project --prefer-dist yiisoft/yii2-app-basic basic
+composer install
 ~~~
 
 Now you should be able to access the application through the following URL, assuming `basic` is the directory
@@ -59,6 +59,13 @@ directly under the Web root.
 
 ~~~
 http://localhost/basic/web/
+~~~
+
+
+Выполните миграции
+
+~~~
+./yii migrate
 ~~~
 
 ### Install from an Archive File
@@ -126,6 +133,18 @@ return [
 - Yii won't create the database for you, this has to be done manually before you can access it.
 - Check and edit the other files in the `config/` directory to customize your application as required.
 - Refer to the README in the `tests` directory for information specific to basic application tests.
+
+
+### GOOGLE API
+
+Переименуйте файл api.example.php в api.php, введите в нем свой ключ от Google API с доступом к Google Sheets API
+
+
+ПАРСЕР
+-------
+
+Для запуска парсера выполните команду 
+	./yii parser
 
 
 TESTING
